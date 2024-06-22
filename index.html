@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Punto de Venta</title>
+    <link rel="stylesheet" href="./CSS/Style.css">
+    <script src="./js/funciones.js"></script>
+    <script src="./js/productos.js"></script>
+    <script src="./js/script.js"></script>
+</head>
+<body>
+    <div>
+        <div class="titulo">
+            <div class="nombre">
+                <h1>Don carero</h1>
+                <h2>No es bueno pero es barato</h2>
+            </div>
+        </div>
+        <div class="container">
+            <table id="tabla">
+                    <tr id="encabezado">
+                        <th>Cantidad</th>
+                        <th>Producto</th>
+                        <th>Precio</th>
+                        <th>Total</th>
+                    </tr>
+                <tbody id="tbody1" style="border: none;">
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <input type="text" id="codigo" class="venta" onkeydown="buscarProductos(event)">
+    <br>
+    <div class="flex-container">
+        <div class="ButtonCont">
+            <input type="button" value="" class="btn1" data-producto="Soda" data-precio="2.00" style="background-image: url('./img/1.png'); background-position: center; background-size: cover;">
+            <input type="button" value="" class="btn1" data-producto="Cerveza" data-precio="2.50" style="background-image: url('./img/2.png'); background-position: center; background-size: cover;">
+            <input type="button" value="" class="btn1" data-producto="Leche" data-precio="3.00" style="background-image: url('./img/3.png'); background-position: center; background-size: cover;">
+            <input type="button" value="" class="btn1" data-producto="Dona" data-precio="3.50" style="background-image: url('./img/4.png'); background-position: center; background-size: cover;">
+            <input type="button" value="" class="btn1" data-producto="Tacos" data-precio="4.00" style="background-image: url('./img/5.png'); background-position: center; background-size: cover;">
+        </div>
+        <div class="cantidad-container">
+            <button id="decremento" class="cantidad-btn">-</button>
+            <span id="cantidad" class="cantidad">1</span>
+            <button id="incremento" class="cantidad-btn">+</button>
+        </div>
+        <div class="total">
+            <h1 id="total">$0.00</h1>
+        </div>
+        <div class="pago-container">
+            <input type="text" id="monto-recibido" placeholder="Monto recibido" onkeydown="procesarPago(event)">
+            <button class="finalizar-venta-btn" onclick="finalizarVenta()">Finalizar venta</button>
+        </div>
+    </div>
+</body>
+</html>
